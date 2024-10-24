@@ -1,0 +1,144 @@
+extends _template.pug
+
+block konten 
+  style.
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column; /* Mengatur arah fleksibel ke kolom */
+      justify-content: space-between; /* Membagi ruang antara navbar dan footer */
+      background-color: #f5f5f5;
+      font-family: 'poppins', sans-serif;
+    }
+
+    .content {
+      display: flex;
+      justify-content: center; /* Memusatkan konten */
+      align-items: center; /* Memastikan konten berada di tengah secara vertikal */
+      flex: 1; /* Mengizinkan konten ini mengambil ruang yang tersisa */
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #1D3E53;
+      border-radius: 12px;
+      padding: 50px; /* Sesuaikan padding sesuai kebutuhan */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 450px;
+      max-width: 100%;
+      margin: 200px;
+    }
+
+    h1 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      outline: none;
+    }
+
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border: 1px solid #80bdff;
+      outline: none;
+    }
+
+    .login-btn {
+      background-color: #3366ff;
+      color: white;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .login-btn:hover {
+      background-color: #1a53ff;
+    }
+
+    .forgot-password {
+      color: #3366ff;
+      font-size: 14px;
+      margin-top: 10px;
+      text-align: right;
+      color: #fff;
+    }
+
+    .or-section {
+      color: #fff;
+      text-align: center;
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .or-section hr {
+      flex: 1;
+    }
+
+    .or-section span {
+      margin: 0 10px;
+    }
+
+    .google-btn {
+      background-color: white;
+      color: black;
+      padding: 10px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .create-account {
+      margin-top: 20px;
+      text-align: center;
+      color: #3366ff;
+      cursor: pointer;
+    }
+
+    h2 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+     a {
+      color: #fff;
+    }
+
+
+
+  .content
+    .container
+      .form-side
+        h1 Profil
+        h2 Enter the information you entered while registering
+        form
+          input(type="email" placeholder="Email" required)
+          input(type="password" placeholder="Password" required)
+          .forgot-password
+            a(href="#") Forgot password?
+          button.login-btn Login
+        .or-section
+          hr
+          span OR
+          hr
+        button.google-btn
+          i.fa.fa-google
+          |  Sign with Google
+        .create-account
+          a(href="#") Create Account
